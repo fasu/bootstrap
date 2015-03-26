@@ -212,10 +212,11 @@ angular.module('ui.bootstrap.typeahead', ['ui.bootstrap.position', 'ui.bootstrap
           if (!inputValue) {
             // Reset in case user had typed something previously.
             modelCtrl.$setValidity('editable', true);
+            return inputValue;
           } else {
             modelCtrl.$setValidity('editable', false);
+            return undefined;
           }
-          return inputValue;
         }
       });
 
